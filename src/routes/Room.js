@@ -124,9 +124,9 @@ const Room = (props) => {
   return (
     <Container>
       <StyleVideo muted ref={useVideo} autoPlay playsInline />
-//       {peers.map((peer, index) => {
-//         return <Video key={index} peer={peer} />;
-//       })}
+      {peers.map((peer, index) => {
+        return <Video key={index} peer={peer} />;
+      })}
     </Container>
   );
 };
