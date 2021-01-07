@@ -46,7 +46,7 @@ const Room = (props) => {
 
   useEffect(() => {
     try {
-      socketRef.current = io('https://web-rtc-be-01.vercel.app', {
+      socketRef.current = io('https://webrtc.cmanga.com', {
         path: '/socket.io',
         transports: ['websocket', 'polling'],
       })
