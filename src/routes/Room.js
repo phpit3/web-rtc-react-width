@@ -32,10 +32,10 @@ const Video = (props) => {
   return <StyleVideo playsInline autoPlay ref={ref} />;
 };
 
-const videoConstraints = {
-  height: window.innerHeight / 2,
-  width: window.innerWidth / 2,
-};
+// const videoConstraints = {
+//   height: window.innerHeight / 2,
+//   width: window.innerWidth / 2,
+// };
 
 const Room = (props) => {
   const [peers, setPeers] = useState([]);
@@ -51,7 +51,7 @@ const Room = (props) => {
         transports: ['websocket', 'polling'],
       })
       navigator.mediaDevices
-        .getUserMedia({ video: videoConstraints, audio: true })
+        .getUserMedia({ audio: true })
         .then((stream) => {
           useVideo.current.srcObject = stream;
           //   console.log(useAudio);
@@ -124,9 +124,9 @@ const Room = (props) => {
   return (
     <Container>
       <StyleVideo muted ref={useVideo} autoPlay playsInline />
-      {peers.map((peer, index) => {
-        return <Video key={index} peer={peer} />;
-      })}
+//       {peers.map((peer, index) => {
+//         return <Video key={index} peer={peer} />;
+//       })}
     </Container>
   );
 };
