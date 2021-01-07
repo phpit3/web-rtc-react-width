@@ -47,8 +47,8 @@ const Room = (props) => {
   useEffect(() => {
     try {
       socketRef.current = io('https://web-rtc-be-01.vercel.app', {
-        // path: '/socket.io',
-        // transports: ['websocket', 'polling'],
+        path: '/socket.io',
+        transports: ['websocket', 'polling'],
       })
       navigator.mediaDevices
         .getUserMedia({ video: videoConstraints, audio: true })
